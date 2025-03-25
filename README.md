@@ -59,6 +59,7 @@ getgenv().Gun = _G.Gun
 getgenv().Mastery = { -- Farm Mastery / ฟามมาสเตอรี่
     ['Melee'] = _G.Mastery['Melee'],
     ['Fruit'] = _G.Mastery['Fruit'],
+
     ['Sword'] = _G.Mastery['Sword'],
     ['Setting Sword'] = { 
         [1] = "Tushita",
@@ -78,6 +79,7 @@ getgenv().Mastery = { -- Farm Mastery / ฟามมาสเตอรี่
         [15] = "Canvander",
 		[16] = 'Wando'
     },
+
     ['Gun'] = false,
     ['Setting Gun'] = { 
         [1] = 'Soul Guitar',
@@ -127,6 +129,7 @@ else
 end
 if _G.Switch_Hub_Series_R then
 	if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
+	
 	local function click(a)
 		game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X+a.AbsoluteSize.X/2,a.AbsolutePosition.Y+90,0,true,a,1)
 		game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X+a.AbsoluteSize.X/2,a.AbsolutePosition.Y+90,0,false,a,1)
@@ -144,6 +147,7 @@ if _G.Switch_Hub_Series_R then
 		until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
 	end
 	task.spawn(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/hermanos-dev/hermanos-script/main/middle.lua'))() end)
+
 	-- RAM
 	if _G.Quest == nil then
 		_G.Quest = {
@@ -398,12 +402,12 @@ if _G.Switch_Hub_Series_R then
 			return bit_zes
 		end
 
-		if game:GetService("CoreGui"):FindFirstChild('Switch Hub') then
-			game:GetService("CoreGui"):FindFirstChild('Switch Hub'):Destroy()
+		if game:GetService("CoreGui"):FindFirstChild('Nano Hub') then
+			game:GetService("CoreGui"):FindFirstChild('Nano Hub'):Destroy()
 		end
 		-- Switch Hub
 		local Switch_Hub = Instance.new("ScreenGui")
-		Switch_Hub.Name = "Switch Hub"
+		Switch_Hub.Name = "Nano Hub"
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		Switch_Hub.Enabled = false
 		
@@ -413,126 +417,126 @@ if _G.Switch_Hub_Series_R then
 		-- Switch Hub 7M
 		local F_Level = Instance.new("Frame")
 		F_Level.Name = "Level"
-		F_Level.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Level.Parent = game:GetService("CoreGui")["Nano Hub"]
 		F_Level.Size = UDim2.new(1, 0, 1, 0)
 		F_Level.Position = UDim2.new(0, 0, 0, 0)
 		F_Level.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Level.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Level
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.Text = "Switch Hub"
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.Size = UDim2.new(1, 0, 0, 40)
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Level.Position = UDim2.new(0.5, 0, -0.2, 0)
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Nano Hub"].Level
+		game:GetService("CoreGui")["Nano Hub"].Level.Fragments.TextColor3 = Color3.fromRGB(116, 127, 62) 
+		game:GetService("CoreGui")["Nano Hub"].Level.Fragments.Text = "Nano Hub"
+		game:GetService("CoreGui")["Nano Hub"].Level.Fragments.Size = UDim2.new(1, 0, 0, 40)
+		game:GetService("CoreGui")["Nano Hub"].Level.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Nano Hub"].Level.Position = UDim2.new(0.5, 0, -0.2, 0)
+		game:GetService("CoreGui")["Nano Hub"].Level.Fragments.TextStrokeTransparency = 1
 		
 		-- Time
 		local F_Text2 = Instance.new("Frame")
 		F_Text2.Name = "Text2"
-		F_Text2.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text2.Parent = game:GetService("CoreGui")["Nano Hub"]
 		F_Text2.Size = UDim2.new(1, 0, 1, 0)
 		F_Text2.Position = UDim2.new(0, 0, 0, 0)
 		F_Text2.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text2.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text2
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Text = ""
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text2.Position = UDim2.new(0.5, 0, -0.1, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Nano Hub"].Text2
+		game:GetService("CoreGui")["Nano Hub"].Text2.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
+		game:GetService("CoreGui")["Nano Hub"].Text2.Fragments.Text = ""
+		game:GetService("CoreGui")["Nano Hub"].Text2.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["Nano Hub"].Text2.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Nano Hub"].Text2.Position = UDim2.new(0.5, 0, -0.1, 0)
+		game:GetService("CoreGui")["Nano Hub"].Text2.Fragments.TextStrokeTransparency = 1
 		
 		-- Name
 		local F_Text = Instance.new("Frame")
 		F_Text.Name = "Text"
-		F_Text.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text.Parent = game:GetService("CoreGui")["Nano Hub"]
 		F_Text.Size = UDim2.new(1, 0, 1, 0)
 		F_Text.Position = UDim2.new(0, 0, 0, 0)
 		F_Text.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.Text = '( '..game.Players.LocalPlayer.Name..' )'
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text.Position = UDim2.new(0.5, 0, 0.14, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Nano Hub"].Text
+		game:GetService("CoreGui")["Nano Hub"].Text.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
+		game:GetService("CoreGui")["Nano Hub"].Text.Fragments.Text = '( '..game.Players.LocalPlayer.Name..' )'
+		game:GetService("CoreGui")["Nano Hub"].Text.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["Nano Hub"].Text.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Nano Hub"].Text.Position = UDim2.new(0.5, 0, 0.14, 0)
+		game:GetService("CoreGui")["Nano Hub"].Text.Fragments.TextStrokeTransparency = 1
 		-- Status
 		local F_Text3 = Instance.new("Frame")
 		F_Text3.Name = "Text3"
-		F_Text3.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text3.Parent = game:GetService("CoreGui")["Nano Hub"]
 		F_Text3.Size = UDim2.new(1, 0, 1, 0)
 		F_Text3.Position = UDim2.new(0, 0, 0, 0)
 		F_Text3.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text3.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text3
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Text = 'Status: Farm Level.'
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Size = UDim2.new(1, 0, 0, 28)
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text3.Position = UDim2.new(0.5, 0, 0.22, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Nano Hub"].Text3
+		game:GetService("CoreGui")["Nano Hub"].Text3.Fragments.TextColor3 = Color3.fromRGB(116, 127, 62) 
+		game:GetService("CoreGui")["Nano Hub"].Text3.Fragments.Text = 'Status: Farm Level.'
+		game:GetService("CoreGui")["Nano Hub"].Text3.Fragments.Size = UDim2.new(1, 0, 0, 28)
+		game:GetService("CoreGui")["Nano Hub"].Text3.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Nano Hub"].Text3.Position = UDim2.new(0.5, 0, 0.22, 0)
+		game:GetService("CoreGui")["Nano Hub"].Text3.Fragments.TextStrokeTransparency = 1
 		-- Item Sanguine Art
 		local F_Text5 = Instance.new("Frame")
 		F_Text5.Name = "Text5"
-		F_Text5.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text5.Parent = game:GetService("CoreGui")["Nano Hub"]
 		F_Text5.Size = UDim2.new(1, 0, 1, 0)
 		F_Text5.Position = UDim2.new(0, 0, 0, 0)
 		F_Text5.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text5.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text5
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.Text = '...'
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text5.Position = UDim2.new(0.5, 0, 0.38, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Nano Hub"].Text5
+		game:GetService("CoreGui")["Nano Hub"].Text5.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
+		game:GetService("CoreGui")["Nano Hub"].Text5.Fragments.Text = '...'
+		game:GetService("CoreGui")["Nano Hub"].Text5.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["Nano Hub"].Text5.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Nano Hub"].Text5.Position = UDim2.new(0.5, 0, 0.38, 0)
+		game:GetService("CoreGui")["Nano Hub"].Text5.Fragments.TextStrokeTransparency = 1
 		-- Full Moon
 		local F_Text6 = Instance.new("Frame")
 		F_Text6.Name = "Text6"
-		F_Text6.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text6.Parent = game:GetService("CoreGui")["Nano Hub"]
 		F_Text6.Size = UDim2.new(1, 0, 1, 0)
 		F_Text6.Position = UDim2.new(0, 0, 0, 0)
 		F_Text6.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text6.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text6
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.TextColor3 = Color3.fromRGB(255,140,0)
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text6.Position = UDim2.new(0.5, 0, -0.03, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Nano Hub"].Text6
+		game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.TextColor3 = Color3.fromRGB(255,140,0)
+		game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+		game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Nano Hub"].Text6.Position = UDim2.new(0.5, 0, -0.03, 0)
+		game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.TextStrokeTransparency = 1
 		spawn(function()
 			while wait(1) do
 				pcall(function()
 					if Three_World then
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 100% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.Text = '🌕 100% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 50% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.Text = '🌕 50% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 25% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.Text = '🌕 25% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.Text = '🌕 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						else 
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						end 
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
 						minutes = math.floor(scripttime/60%60)
 						hours = math.floor(scripttime/3600)
 						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
-						game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Text = tempo
+						game:GetService("CoreGui")["Nano Hub"].Text2.Fragments.Text = tempo
 					else
-						game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+						game:GetService("CoreGui")["Nano Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
 						minutes = math.floor(scripttime/60%60)
 						hours = math.floor(scripttime/3600)
 						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
-						game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Text = tempo
+						game:GetService("CoreGui")["Nano Hub"].Text2.Fragments.Text = tempo
 					end
 				end)
 			end
@@ -540,18 +544,18 @@ if _G.Switch_Hub_Series_R then
 		-- Sanguine Art
 		local F_Text4 = Instance.new("Frame")
 		F_Text4.Name = "Text4"
-		F_Text4.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text4.Parent = game:GetService("CoreGui")["Nano Hub"]
 		F_Text4.Size = UDim2.new(1, 0, 1, 0)
 		F_Text4.Position = UDim2.new(0, 0, 0, 0)
 		F_Text4.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text4.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text4
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.Text = '...'
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.Size = UDim2.new(1, 0, 0, 35)
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text4.Position = UDim2.new(0.5, 0, 0.47, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Nano Hub"].Text4
+		game:GetService("CoreGui")["Nano Hub"].Text4.Fragments.TextColor3 = Color3.fromRGB(116, 127, 62) 
+		game:GetService("CoreGui")["Nano Hub"].Text4.Fragments.Text = '...'
+		game:GetService("CoreGui")["Nano Hub"].Text4.Fragments.Size = UDim2.new(1, 0, 0, 35)
+		game:GetService("CoreGui")["Nano Hub"].Text4.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["Nano Hub"].Text4.Position = UDim2.new(0.5, 0, 0.47, 0)
+		game:GetService("CoreGui")["Nano Hub"].Text4.Fragments.TextStrokeTransparency = 1
 
 		local BlurSwitch = Instance.new("BlurEffect")
 		BlurSwitch.Name = "SwitchBlur"
@@ -563,12 +567,12 @@ if _G.Switch_Hub_Series_R then
 			if not isTyping then
 				if input.KeyCode == Enum.KeyCode.B then
 					if togle_up then
-						game:GetService("CoreGui")["Switch Hub"].Enabled = false
+						game:GetService("CoreGui")["Nano Hub"].Enabled = false
 						game.Lighting.ExposureCompensation = 0
 						--BlurSwitch.Size = 0
 						togle_up = false
 					else
-						game:GetService("CoreGui")["Switch Hub"].Enabled = true
+						game:GetService("CoreGui")["Nano Hub"].Enabled = true
 						game.Lighting.ExposureCompensation = -10
 						--BlurSwitch.Size = 80
 						togle_up = true
@@ -606,7 +610,7 @@ if _G.Switch_Hub_Series_R then
 		SearchStroke.Parent = ToggleFrameUi
 		SearchStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 		SearchStroke.LineJoinMode = Enum.LineJoinMode.Round
-		SearchStroke.Color = Color3.fromRGB(0, 255, 186) 
+		SearchStroke.Color = Color3.fromRGB(116, 127, 62) 
 		SearchStroke.Transparency = 0
 		
 		UICorner.CornerRadius = UDim.new(0, 5)
@@ -618,12 +622,12 @@ if _G.Switch_Hub_Series_R then
 		ToggleImgUi.BackgroundTransparency = 1
 		ToggleImgUi.Position = UDim2.new(0.0454545468, 0, 0.125000313, 0)
 		ToggleImgUi.Size = UDim2.new(0, 35, 0, 35)
-		ToggleImgUi.Image = "rbxassetid://17260696651"
+		ToggleImgUi.Image = "rbxassetid://18719019076"
 		ToggleImgUi.MouseButton1Click:Connect(function()
 			if togle_up then
 				ToggleImgUi.ImageTransparency = 0.3
 				uihide = true
-				game:GetService("CoreGui")["Switch Hub"].Enabled = false
+				game:GetService("CoreGui")["Nano Hub"].Enabled = false
 				game.Lighting.ExposureCompensation = 0
 				--BlurSwitch.Size = 0
 				togle_up = false
@@ -632,7 +636,7 @@ if _G.Switch_Hub_Series_R then
 			else
 				ToggleImgUi.ImageTransparency = 0.3
 				uihide = true
-				game:GetService("CoreGui")["Switch Hub"].Enabled = true
+				game:GetService("CoreGui")["Nano Hub"].Enabled = true
 				game.Lighting.ExposureCompensation = -10
 				--BlurSwitch.Size = 80
 				togle_up = true
@@ -648,7 +652,7 @@ if _G.Switch_Hub_Series_R then
 		Uitoggle.Position = UDim2.new(0.14, 0, 0.1, 0)
 		Uitoggle.Size = UDim2.new(0, 137, 0, 25)
 		Uitoggle.Font = Enum.Font.GothamSemibold
-		Uitoggle.Text = "Switch Hub Kaitun"
+		Uitoggle.Text = "Nano Hub Kaitun"
 		Uitoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Uitoggle.TextSize = 12.000
 		
@@ -660,11 +664,11 @@ if _G.Switch_Hub_Series_R then
 		Yedhee.Size = UDim2.new(0, 137, 0, 25)
 		Yedhee.Font = Enum.Font.GothamSemibold
 		Yedhee.Text = "White Screen (B)"
-		Yedhee.TextColor3 = Color3.fromRGB(0, 255, 186) 
+		Yedhee.TextColor3 = Color3.fromRGB(116, 127, 62) 
 		Yedhee.TextSize = 12.000
 		
-		if game.CoreGui:FindFirstChild('Switch Hub C') then
-			game.CoreGui:FindFirstChild('Switch Hub C'):Destroy()
+		if game.CoreGui:FindFirstChild('Nano Hub C') then
+			game.CoreGui:FindFirstChild('Nano Hub C'):Destroy()
 		end
 		local function click(a)
 			game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X+a.AbsoluteSize.X/2.5,a.AbsolutePosition.Y+50,0,true,a,1)
@@ -685,8 +689,8 @@ if _G.Switch_Hub_Series_R then
 			repeat 
 				for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.ScrollingFrame.Frame:GetDescendants()) do
 					if v.Name == 'Background' and tostring(v.BackgroundColor) == 'Bright red' and not table.find(keep_all_name,v.Parent.ItemName.Text) then 
-						v.Parent:Clone().Parent = game:GetService("CoreGui")["Switch Hub C"][Folder]
-						game:GetService("CoreGui")["Switch Hub C"][Folder][v.Parent.Name].Name = v.Parent.ItemName.Text
+						v.Parent:Clone().Parent = game:GetService("CoreGui")["Nano Hub C"][Folder]
+						game:GetService("CoreGui")["Nano Hub C"][Folder][v.Parent.Name].Name = v.Parent.ItemName.Text
 						table.insert(keep_all_name,v.Parent.ItemName.Text)
 					end
 				end
@@ -704,17 +708,17 @@ if _G.Switch_Hub_Series_R then
 		end
 		-- Switch Hub C
 		local Switch_Hub = Instance.new("ScreenGui")
-		Switch_Hub.Name = "Switch Hub C"
+		Switch_Hub.Name = "Nano Hub C"
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		-- Fruit Inventory Backpack
 		local F_FruitB = Instance.new("Frame")
 		F_FruitB.Name = "FruitB"
-		F_FruitB.Parent = game:GetService("CoreGui")["Switch Hub C"]
+		F_FruitB.Parent = game:GetService("CoreGui")["Nano Hub C"]
 		F_FruitB.Size = UDim2.new(0.17, 0, 0, 0)
 		F_FruitB.Position = UDim2.new(0.02, 0, 0.03, 0)
 		F_FruitB.Transparency = 1
 		local uig = Instance.new("UIGridLayout")
-		uig.Parent = game:GetService("CoreGui")["Switch Hub C"].FruitB
+		uig.Parent = game:GetService("CoreGui")["Nano Hub C"].FruitB
 		uig.CellSize = UDim2.new(0, 55, 0, 55)
 		--[[
 		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton) -- open menu
@@ -724,14 +728,14 @@ if _G.Switch_Hub_Series_R then
 		CheckPhoto('Treasure')
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Visible = true
 		Load_Info('Blox Fruit','FruitB')
-		game:GetService("CoreGui")["Switch Hub C"].FruitB.Visible = true
+		game:GetService("CoreGui")["Nano Hub C"].FruitB.Visible = true
 		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton) -- open menu
 		]]
 		wait(.5)
 		if _G.Setting['Black Screen'] then
 			ToggleImgUi.ImageTransparency = 0.3
 			uihide = true
-			game:GetService("CoreGui")["Switch Hub"].Enabled = true
+			game:GetService("CoreGui")["Nano Hub"].Enabled = true
 			game.Lighting.ExposureCompensation = -10
 			--BlurSwitch.Size = 80
 			togle_up = true
@@ -739,14 +743,14 @@ if _G.Switch_Hub_Series_R then
 			ToggleImgUi.ImageTransparency = 0
 		end
 		function Set_Status_X(vu)
-			game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Text = vu
+			game:GetService("CoreGui")["Nano Hub"].Text3.Fragments.Text = vu
 		end
 		--[[
 		local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/alichnochi/code/main/notifycation.lua"))()
 		local Notify = AkaliNotif.Notify
 		Notify({
 			Description = '✅ Turn on and off (White Screen "Y")',
-			Title = "Switch Hub Kaitun | "..tostring(game.Players.LocalPlayer.Name),
+			Title = "Nano Hub Kaitun | "..tostring(game.Players.LocalPlayer.Name),
 			Duration = 5
 		})
 		Notify({
@@ -755,7 +759,7 @@ if _G.Switch_Hub_Series_R then
 			Duration = 5
 		})
 		local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/alichnochi/code/main/notification.status.lua", true))()
-		status_pass = Notification.new("message", 'Switch Hub Kaitun | ', "Status: ...")
+		status_pass = Notification.new("message", 'Nano Hub Kaitun | ', "Status: ...")
 		status_pass:changeColor(Color3.fromRGB(15,15,15),Color3.fromRGB(42, 170, 138),Color3.fromRGB(255, 244, 0))
 		spawn(function()
 			while wait(1) do
@@ -807,7 +811,7 @@ if _G.Switch_Hub_Series_R then
 	end
 	
 	local PepsisWorld = library:CreateWindow({
-		Name = "Switch Hub [ Kaitun ]",
+		Name = "Nano Hub [ Kaitun ]",
 		Themeable = {	
 		}
 	})
@@ -3889,57 +3893,125 @@ if _G.Switch_Hub_Series_R then
 			end
 		end)
 	end
-	function AttackNoCD()-- KOBEN
-_G.Fast = 0.00001
-_G.FPS = 120
-
--- ตั้งค่า FPS cap
-setfpscap(_G.FPS)
-
--- ฟังก์ชันสำหรับการโจมตี
-local function attackEnemy(enemy)
-    if enemy:IsA("Model") and enemy:FindFirstChild("Humanoid") then
-        local leftHand = enemy:FindFirstChild("LeftHand")
-        local rightHand = enemy:FindFirstChild("RightHand")
-        setfpscap(1000)
-        if leftHand then
-            local args = {
-                [1] = leftHand,
-                [2] = {},
-                [4] = "1704d502"
-            }
-            game:GetService("ReplicatedStorage").Modules.Net:FindFirstChild("RE/RegisterHit"):FireServer(unpack(args))
-        end
-
-        if rightHand then
-            local args = {
-                [1] = rightHand,
-                [2] = {},
-                [4] = "1704d502"
-            }
-            game:GetService("ReplicatedStorage").Modules.Net:FindFirstChild("RE/RegisterHit"):FireServer(unpack(args))
-        end
-
-        -- ส่งคำสั่งโจมตี
-        local args2 = {
-            [1] = _G.Fast
-        }
-        game:GetService("ReplicatedStorage").Modules.Net:FindFirstChild("RE/RegisterAttack"):FireServer(unpack(args2))
-
-        -- ลด FPS หลังโจมตี
-        task.wait(_G.Fast)
-        setfpscap(_G.FPS)
-    end
-end
-
--- วนลูปตีมอนสเตอร์ทั้งหมดอย่างต่อเนื่อง
-while true do
-    for _, enemy in pairs(workspace.Enemies:GetChildren()) do
-        task.spawn(attackEnemy, enemy)  -- ใช้ task.spawn ตีหลายตัวพร้อมกัน
-    end
-    task.wait(_G.Fast)
-end
-
+	function AttackNoCD()
+		pcall(function()
+			if FarmPlayer and Farm_P_ATTK then
+				if AttackPlayers == nil then
+					AttackPlayers = 'None'
+				end
+				local AC = CbFw2.activeController
+				for i = 1, 1 do 
+					--[[ 
+                    local bladehit = require(game.ReplicatedStorage.CombatFramework.RigLib).getBladeHits(
+                        plr.Character,
+                        {plr.Character.HumanoidRootPart},
+                        60
+                    )
+                    ]]
+                    local cac = {}
+                    for k,v in pairs(game.Workspace.Characters:GetChildren()) do
+                        if v:FindFirstChild('Humanoid') and v.Humanoid.Health > 0 and (v.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 and tostring(v.Name) == AttackPlayers then
+                            table.insert(cac, v.HumanoidRootPart)
+                        end
+                    end
+                    --[[
+                    for k, v in pairs(bladehit) do
+                        if v.Parent:FindFirstChild("HumanoidRootPart") and (v.Parent:FindFirstChild("HumanoidRootPart").Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 and v.Parent:FindFirstChild("Humanoid").Health > 0 and string.find(tostring(v.Parent),'Lv') and not hash[v.Parent] then
+                            table.insert(cac, v.Parent.HumanoidRootPart)
+                            hash[v.Parent] = true
+                        end
+                    end
+                    ]]
+					bladehit = cac
+					if #bladehit > 0 then
+						local u8 = debug.getupvalue(AC.attack, 5)
+						local u9 = debug.getupvalue(AC.attack, 6)
+						local u7 = debug.getupvalue(AC.attack, 4)
+						local u10 = debug.getupvalue(AC.attack, 7)
+						local u12 = (u8 * 798405 + u7 * 727595) % u9
+						local u13 = u7 * 798405
+						(function()
+							u12 = (u12 * u9 + u13) % 1099511627776
+							u8 = math.floor(u12 / u9)
+							u7 = u12 - u8 * u9
+						end)()
+						u10 = u10 + 1
+						debug.setupvalue(AC.attack, 5, u8)
+						debug.setupvalue(AC.attack, 6, u9)
+						debug.setupvalue(AC.attack, 4, u7)
+						debug.setupvalue(AC.attack, 7, u10)
+						if time_all_p == 0 then
+							wait(2)
+						end
+						time_x = time_x+1
+						time_all_p = time_all_p+1
+						if plr.Character:FindFirstChildOfClass("Tool") and AC.blades and AC.blades[1] then
+							AC.animator.anims.basic[1]:Play(0.01,0.01,0.01)
+							if time_x >= 2 and time_all_p >= 150 or game:GetService("Players").LocalPlayer.PlayerGui.Main.SafeZone.Visible == true then
+								game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(GetCurrentBlade()))
+								time_x = 0
+							end
+							game.ReplicatedStorage.Remotes.Validator:FireServer(math.floor(u12 / 1099511627776 * 16777215), u10)
+							game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("hit", bladehit, 3, "")
+						end
+					end
+				end
+			else
+				local AC = CbFw2.activeController
+				for i = 1, 1 do
+					--[[
+                    local cac = {}
+                    for k,v in pairs(game.Workspace.Enemies:GetChildren()) do
+						if Select_List_Boss == 'Core' and Start_Kill_Boss and v:FindFirstChild("HumanoidRootPart") then
+							table.insert(cac, v.HumanoidRootPart)
+						elseif List.Quest and Quest == 'Evo Race V3' then
+							if v:FindFirstChild('Humanoid') and v.Humanoid.Health > 0 and (v.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 70 then
+								table.insert(cac, v.HumanoidRootPart)
+							end
+						else
+							if v:FindFirstChild('Humanoid') and v.Humanoid.Health > 0 and (v.HumanoidRootPart.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 70 and string.find(tostring(v.Humanoid.DisplayName),'Lv.') then
+								table.insert(cac, v.HumanoidRootPart)
+							end
+						end
+                    end]]
+					local L_88_ = game.Players.LocalPlayer
+					local bladehit = require(game.ReplicatedStorage.CombatFramework.RigLib).getBladeHits(
+                        L_88_.Character, {
+						L_88_.Character.HumanoidRootPart
+					}, 80)
+					--bladehit = getAllBladeHits(80)
+					if #bladehit > 0 then
+						local u8 = debug.getupvalue(AC.attack, 5)
+						local u9 = debug.getupvalue(AC.attack, 6)
+						local u7 = debug.getupvalue(AC.attack, 4)
+						local u10 = debug.getupvalue(AC.attack, 7)
+						local u12 = (u8 * 798405 + u7 * 727595) % u9
+						local u13 = u7 * 798405
+						(function()
+							u12 = (u12 * u9 + u13) % 1099511627776
+							u8 = math.floor(u12 / u9)
+							u7 = u12 - u8 * u9
+						end)()
+						u10 = u10 + 1
+						debug.setupvalue(AC.attack, 5, u8)
+						debug.setupvalue(AC.attack, 6, u9)
+						debug.setupvalue(AC.attack, 4, u7)
+						debug.setupvalue(AC.attack, 7, u10)
+						time_x = time_x+1
+						time_all_x = time_all_x+1
+						if plr.Character:FindFirstChildOfClass("Tool") and AC.blades and AC.blades[1] then
+							AC.animator.anims.basic[1]:Play(0.01,0.01,0.01)
+							if time_x >= 2 then
+								game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(GetCurrentBlade()))
+								time_x = 0
+							end
+							game.ReplicatedStorage.Remotes.Validator:FireServer(math.floor(u12 / 1099511627776 * 16777215), u10)
+							game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("hit", bladehit, 3, "")
+						end
+					end
+				end
+			end
+		end)
 	end
 	spawn(function()
 		while task.wait() do
@@ -6760,7 +6832,7 @@ end
 					if Quest_Race_V4_H then
 						ris_text = ris_text..' 🕹️'
 					end
-					game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.Text  = ris_text
+					game:GetService("CoreGui")["Nano Hub"].Text4.Fragments.Text  = ris_text
 				end
 				local ris_text = ''
 				if RGB_H then
@@ -6811,7 +6883,7 @@ end
 						ris_text = ris_text..result[1]
 					end
 				end
-				game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.Text = ris_text
+				game:GetService("CoreGui")["Nano Hub"].Text5.Fragments.Text = ris_text
 				wait(300)
 			end)
 		end
@@ -7223,7 +7295,7 @@ end
 								game.StarterGui:SetCore("SendNotification", {
 									Title = "Check Boss Spawn", 
 									Text = '99/10',
-									Icon = "rbxassetid://17002601075",
+									Icon = "rbxassetid://18719019076",
 									Duration = 15
 								})
 								List.Quest = false 
@@ -11175,15 +11247,15 @@ end
 					};
 					["description"] = "**Join Script**\n```lua\n"..tostring('game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","'..game.JobId..'")').."\n```";
 					["author"] = {
-						["name"] = "Switch Hub (Notification)";
-						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
+						["name"] = "Nano Hub (Notification)";
+						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
 						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
 					};
 					["footer"] = {
-						["text"] = "By Switch Hub";
-						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
+						["text"] = "By Nano Hub";
+						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["timestamp"] = DateTime.now():ToIsoDate()
 				}
@@ -11237,15 +11309,15 @@ end
 					};
 					["description"] = "**Join Script**\n```lua\n"..tostring('game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","'..game.JobId..'")').."\n```";
 					["author"] = {
-						["name"] = "Switch Hub (Notification)";
-						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
+						["name"] = "Nano Hub (Notification)";
+						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
 						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
 					};
 					["footer"] = {
-						["text"] = "By Switch Hub";
-						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
+						["text"] = "By Nano Hub";
+						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["timestamp"] = DateTime.now():ToIsoDate()
 				}
@@ -11282,7 +11354,7 @@ end
 						if game.Workspace.Enemies:FindFirstChild('rip_indra True Form') or game.ReplicatedStorage:FindFirstChild('rip_indra True Form') then
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
-								SendBoss('https://discord.com/api/webhooks/1221652773091807264/N-tNF6oN_ISWQIkcaveueLDDPUz8erLg0gkga7n2fH1L0GD8FdfdUGs9kDgv_H2eR2Rx','rip_indra True Form')
+								SendBoss('https://discord.com/api/webhooks/1304583082552328284/kwG6a69w-NftaSQQL-j1youlp_xlmLFlUFVg9KynwSXHCSo681DFfWh_9Qqr6Wm4EeTY','rip_indra True Form')
 							end
 						end
 						if #game.Players:GetChildren() <= 3 then
@@ -11296,7 +11368,7 @@ end
 								table.insert(result, each)
 							end
 							if tonumber(result[1]) >= 0 and tonumber(result[1]) < 12 then
-								SendFullMoon('https://discord.com/api/webhooks/1221652726337896559/Oh6DerE386fvwmsezJC6g61N9eeEAt5DX0VP6DH6OZn61PE-to82F6lIJoedksEChVpL')
+								SendFullMoon('https://discord.com/api/webhooks/1304584605520891986/lOd1zYNNM_VDJhC4ehctg7zX5lHl9S3ZhCyC-ggP1zTqiR0D--7czmIXgmbgNaHANF6X')
 							end
 						end
 						if FullMoon_S and MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
@@ -11305,11 +11377,11 @@ end
 							return
 						elseif FullMoon_S and not table.find(_G.Keep_Job,tostring(game.JobId)) and game:GetService("Lighting").LightingLayers.Night.Intensity.Value == 1 then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1215929162569617418/eOsglix-5u-gtUDn8wT_BclQuXSflRCT2E3qL9wlJx6eI3umzO2TXCVezCWBwydh-uYR')
+							SendFullMoon('https://discord.com/api/webhooks/1304584605520891986/lOd1zYNNM_VDJhC4ehctg7zX5lHl9S3ZhCyC-ggP1zTqiR0D--7czmIXgmbgNaHANF6X')
 							return
 						elseif MysticIsland_S and not table.find(_G.Keep_Job,tostring(game.JobId)) then
 							table.insert(_G.Keep_Job,tostring(game.JobId))
-							SendFullMoon('https://discord.com/api/webhooks/1215929078532542535/7ykd5BrmfvV7ewPwZ1rXilB-5u1qOMKBPr8P2eKXpzmGnejQ7hji13V4Et7eV64tACun')
+							SendFullMoon('https://discord.com/api/webhooks/1304584312632512573/y7EHj44WAhEazJcwHjNNuYywGKtDhpEKmRFpXxjN1D2MwAjp4pN4AUNaQ0MX_LSqceRX')
 							return
 						end	
 						wait(10)
@@ -11324,13 +11396,13 @@ end
 					if game.Workspace.Enemies:FindFirstChild('Cursed Captain') or game.ReplicatedStorage:FindFirstChild('Cursed Captain') then
 						if #game.Players:GetChildren() <= 10 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 							table.insert(_G.Keep_JobX,tostring(game.JobId))
-							SendBoss('https://discord.com/api/webhooks/1221652750186713211/lx8EsPYmqEeswOLC0Mc6B6XkyDd9npXQ7Jq45PFeVjEaNMEWsqSSqwfh3qe5UJINPFhC','Cursed Captain')
+							SendBoss('https://discord.com/api/webhooks/1304583993626198026/GyH59WiTRnJ4n-vMrA8Kipmr63fRRPltA_L0-b3QAfyGpiBSEP8CjfMh20vJGv3omDau','Cursed Captain')
 						end
 					end
 					if game.Workspace.Enemies:FindFirstChild('Darkbeard') or game.ReplicatedStorage:FindFirstChild('Darkbeard') then
 						if #game.Players:GetChildren() <= 10 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 							table.insert(_G.Keep_JobX,tostring(game.JobId))
-							SendBoss('https://discord.com/api/webhooks/1221652796277915751/PoTljiAd5tS62T0QiKLogngm2uieZTdo1RtHzJXDEsA7aETLBvHBKNPfSNEVw1xYsKG-','Darkbeard')
+							SendBoss('https://discord.com/api/webhooks/1304583082552328284/kwG6a69w-NftaSQQL-j1youlp_xlmLFlUFVg9KynwSXHCSo681DFfWh_9Qqr6Wm4EeTY','Darkbeard')
 						end
 					end
 				end)
